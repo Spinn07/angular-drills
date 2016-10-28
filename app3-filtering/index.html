@@ -1,5 +1,14 @@
-<html>
-	<body>
+<html ng-app="myApp">
+	<body ng-controller="mainController">
+		{{data}}
+		<input ng-model="thisFilter"/>
+		<div ng-repeat="person in people | filter: thisFilter"/>
+		<h3>{{person.name}}</h3>
+		<p>Email: {{person.email}}</p>
+		<p>Date Employed: {{person.dateEmployed}}</p>
+		<p>Phone Number: {{person.phone}}</p>
+
+
 		Something
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
